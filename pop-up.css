@@ -1,0 +1,82 @@
+*{
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+.block img{
+  width: 100%;
+  height: 665px;
+  background-size: cover;
+  background-position: center;
+}
+.pop-up{
+  position: absolute;
+  height: 240px;
+  top: 200px;
+  left: 35%;
+  background: #f0e4d4;
+  border-radius: 10px;
+}
+.pop-up a{
+  color: white;
+  background: black;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 3px 6px;
+  border-radius: 11px;
+}
+.pop-up h1{
+  font-family: sans-serif;
+  margin-left: 110px;
+  margin-top: 40px;
+}
+.pop-up p{
+  margin: 5px 25px;
+}
+.pop-up input{
+  margin-left: 110px;
+  margin-top: 40px;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 20px;
+}
+.pop-up button{
+  padding: 10px;
+  border-radius: 20px;
+  background: tomato;
+  color: white;
+}
+.pop-up{
+  top: -400px;
+  transform-origin: 10px 10px;
+  animation: drop 1s 2s linear forwards,
+              swing 2s 4s ease forwards;
+}
+
+@keyframes drop{
+  0%{
+    opacity: 0;
+  }
+  70%{
+    transform: translateY(650px);
+  }
+  80%{
+    transform: translateY(600px);
+  }
+  90%{
+    transform: translateY(650px);
+  }
+  100%{
+    transform: translateY(600px);
+    opacity: 1;
+  }
+}
+@keyframes swing{
+  0%{ transform: translateY(600px) rotateZ(0deg);}
+  30%{ transform: translateY(600px) rotateZ(90deg);}
+  70%{ transform: translateY(600px) rotateZ(70deg);}
+  100%{ transform: translateY(600px) rotateZ(75deg);}
+}
